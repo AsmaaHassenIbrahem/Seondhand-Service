@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.fontys'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.28'
+
+    compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.28'
+    compile group: 'org.glassfish.jersey.bundles.repackaged', name: 'jersey-guava', version: '2.26-b03'
+
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.4.0-b180830.0359'
+    compile group: 'javax.activation', name: 'activation', version: '1.1.1'
+
+    // for JSON de-serialisation
+    compile group: 'com.owlike', name: 'genson', version: '1.4'
+}
